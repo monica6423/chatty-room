@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\RegisterController;
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 //the method we want to call is index
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
